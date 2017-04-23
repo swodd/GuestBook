@@ -25,6 +25,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(this);
+
+        btnRead = (Button) findViewById(R.id.btnRead);
+        btnRead.setOnClickListener(this);
+
+        btnClear = (Button) findViewById(R.id.btnClear);
+        btnClear.setOnClickListener(this);
+
+        etName = (EditText) findViewById(R.id.etName);
+        etEmail = (EditText) findViewById(R.id.etEmail);
+
+        // создаем обьект для создания и управления версиями ВД
+        dbHelper = new DBHelper(this);
+
+
     }
 
 
